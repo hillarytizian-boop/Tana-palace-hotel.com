@@ -5,27 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tana Palace Hotel – Hola | Luxury Stay in Tana Place Forest</title>
 <meta name="description" content="Experience luxury and nature at Tana Palace Hotel, Hola. 4-star accommodation, fine dining, and conference facilities in the heart of Tana Place Forest.">
-
-<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <style>
-:root {
---primary-color: #0f3d32;
---accent-color: #c5a059;
---text-dark: #1a1a1a;
---text-light: #666666;
---bg-light: #f9f9f9;
---white: #ffffff;
---transition: all 0.3s ease;
---shadow: 0 10px 30px rgba(0,0,0,0.08);
---radius: 8px;
-}
+:root{--primary-color:#0f3d32;--accent-color:#c5a059;--text-dark:#1a1a1a;--text-light:#666666;--bg-light:#f9f9f9;--white:#ffffff;--transition:all 0.3s ease;--shadow:0 10px 30px rgba(0,0,0,0.08);--radius:8px;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Lato',sans-serif;color:var(--text-dark);line-height:1.6;background-color:var(--white);overflow-x:hidden;}
@@ -71,7 +56,7 @@ header{position:fixed;top:0;width:100%;z-index:1000;background-color:rgba(255,25
 .form-control:focus{outline:none;border-color:var(--accent-color);}
 .price-display{font-size:1.2rem;font-weight:700;color:var(--primary-color);margin-top:10px;display:none;}
 .rooms-grid,.gallery-grid,.reviews-grid{display:grid;gap:30px;}
-.rooms-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+.rooms-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-bottom:50px;}
 .room-card,.review-card,.feature-card{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);}
 .room-card:hover,.feature-card:hover{transform:translateY(-10px);}
 .room-image,.feature-img,.gallery-item img{height:250px;width:100%;object-fit:cover;}
@@ -83,11 +68,11 @@ header{position:fixed;top:0;width:100%;z-index:1000;background-color:rgba(255,25
 .feature-section{background-color:var(--bg-light);padding:80px 0;}
 .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--white);}
 .feature-content{padding:50px;display:flex;flex-direction:column;justify-content:center;}
-.gallery-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;}
+.gallery-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;margin-bottom:50px;}
 .gallery-item{height:250px;border-radius:var(--radius);overflow:hidden;position:relative;cursor:pointer;}
 .gallery-item img{width:100%;height:100%;transition:transform 0.5s ease;}
 .gallery-item:hover img{transform:scale(1.1);}
-.reviews-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
+.reviews-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-bottom:50px;}
 .review-card{background:var(--bg-light);padding:30px;border-radius:var(--radius);text-align:center;}
 .review-stars{color:var(--accent-color);margin-bottom:15px;}
 .review-text{font-style:italic;color:var(--text-light);margin-bottom:20px;}
@@ -105,16 +90,9 @@ footer{background-color:var(--primary-color);color:var(--white);padding:60px 0 2
 .footer-links a{color:rgba(255,255,255,0.7);}
 .footer-links a:hover{color:var(--accent-color);}
 .copyright{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);font-size:0.9rem;}
-@media (max-width:768px){
-.nav-links,.nav-cta{display:none;}
-.mobile-toggle{display:block;}
-.hero-content h1{font-size:2.5rem;}
-.about-grid,.feature-grid,.contact-container{grid-template-columns:1fr;}
-.feature-img{min-height:250px;}
-.booking-widget{margin-top:0;border-radius:0;box-shadow:none;padding:20px;}
-.hero{height:auto;min-height:100vh;padding-top:80px;}
-.booking-form{grid-template-columns:1fr;}
-}
+.whatsapp-float{position:fixed;bottom:30px;right:30px;background-color:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 4px 10px rgba(0,0,0,0.3);z-index:100;transition:var(--transition);}
+.whatsapp-float:hover{transform:scale(1.1);background-color:#20ba5a;}
+@media(max-width:768px){.nav-links,.nav-cta{display:none;}.mobile-toggle{display:block;}.hero-content h1{font-size:2.5rem;}.booking-form{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -141,7 +119,7 @@ footer{background-color:var(--primary-color);color:var(--white);padding:60px 0 2
 </div>
 </header>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section id="home" class="hero">
 <div class="hero-slider">
 <div class="slide active" style="background-image: url('https://image.qwenlm.ai/public_source/1a3f3862-7304-4fd3-beeb-ce9bc825e3f7/1535ec8de-5841-49f4-b763-b257654ae289.png');"></div>
@@ -153,44 +131,19 @@ footer{background-color:var(--primary-color);color:var(--white);padding:60px 0 2
 <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
 <h1>Tana Palace Hotel – Hola</h1>
 <p>Experience unparalleled luxury nestled in the heart of Tana Place Forest. Where nature meets elegance.</p>
-<div style="margin-top: 20px;">
-<span class="badge"><i class="fas fa-check-circle"></i> Open Now</span>
-</div>
+<div style="margin-top: 20px;"><span class="badge"><i class="fas fa-check-circle"></i> Open Now</span></div>
 </div>
 </section>
 
-<!-- Booking Widget -->
+<!-- Booking -->
 <div class="container">
 <div class="booking-widget" id="book">
 <form class="booking-form" id="bookingForm">
-<div class="form-group">
-<label>Check In</label>
-<input type="date" class="form-control" id="checkin" required>
-</div>
-<div class="form-group">
-<label>Check Out</label>
-<input type="date" class="form-control" id="checkout" required>
-</div>
-<div class="form-group">
-<label>Guests</label>
-<select class="form-control" id="guests">
-<option value="1">1 Guest</option>
-<option value="2" selected>2 Guests</option>
-<option value="3">3 Guests</option>
-<option value="4">4 Guests</option>
-</select>
-</div>
-<div class="form-group">
-<label>Room Type</label>
-<select class="form-control" id="roomType">
-<option value="8000">Deluxe Room – KES 8,000</option>
-<option value="12000">Executive Suite – KES 12,000</option>
-<option value="18000">Presidential Suite – KES 18,000</option>
-</select>
-</div>
-<div class="form-group">
-<button type="submit" class="btn btn-primary">Check Availability</button>
-</div>
+<div class="form-group"><label>Check In</label><input type="date" class="form-control" id="checkin" required></div>
+<div class="form-group"><label>Check Out</label><input type="date" class="form-control" id="checkout" required></div>
+<div class="form-group"><label>Guests</label><select class="form-control" id="guests"><option value="1">1 Guest</option><option value="2" selected>2 Guests</option><option value="3">3 Guests</option><option value="4">4 Guests</option></select></div>
+<div class="form-group"><label>Room Type</label><select class="form-control" id="roomType"><option value="8000">Deluxe Room – KES 8,000</option><option value="12000">Executive Suite – KES 12,000</option><option value="18000">Presidential Suite – KES 18,000</option></select></div>
+<div class="form-group"><button type="submit" class="btn btn-primary">Check Availability</button></div>
 </form>
 <div class="price-display" id="priceDisplay"></div>
 </div>
@@ -199,41 +152,61 @@ footer{background-color:var(--primary-color);color:var(--white);padding:60px 0 2
 <!-- WhatsApp -->
 <a href="https://wa.me/254718100200" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 
-<script>
-// Hero Slider
-const slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
-setInterval(() => {
-slides[currentSlide].classList.remove('active');
-currentSlide = (currentSlide + 1) % slides.length;
-slides[currentSlide].classList.add('active');
-}, 5000);
+<!-- Rooms Section -->
+<section id="rooms" class="section-padding">
+<div class="container">
+<div class="section-title"><h2>Our Rooms</h2><p>Luxury rooms designed for comfort and style.</p></div>
+<div class="rooms-grid">
+<div class="room-card">
+<img src="https://image.qwenlm.ai/public_source/room1.jpg" class="room-image">
+<div class="room-details">
+<h3 class="room-title">Deluxe Room</h3>
+<span class="room-price">KES 8,000/night</span>
+<div class="room-amenities"><i class="fas fa-bed"></i> 1 King Bed<i class="fas fa-wifi"></i> Wi-Fi</div>
+<p>Elegant room with forest view, ensuite bathroom, and modern amenities.</p>
+</div>
+</div>
 
-// Mobile Toggle
-const mobileToggle = document.querySelector('.mobile-toggle');
-const navLinks = document.querySelector('.nav-links');
-const navCta = document.querySelector('.nav-cta');
-mobileToggle.addEventListener('click', () => {
-navLinks.classList.toggle('show');
-navCta.classList.toggle('show');
-});
+<div class="room-card">
+<img src="https://image.qwenlm.ai/public_source/room2.jpg" class="room-image">
+<div class="room-details">
+<h3 class="room-title">Executive Suite</h3>
+<span class="room-price">KES 12,000/night</span>
+<div class="room-amenities"><i class="fas fa-bed"></i> 2 Queen Beds<i class="fas fa-wifi"></i> Wi-Fi</div>
+<p>Spacious suite with lounge area, balcony, and premium facilities.</p>
+</div>
+</div>
 
-// Booking Form
-const bookingForm = document.getElementById('bookingForm');
-const priceDisplay = document.getElementById('priceDisplay');
-bookingForm.addEventListener('submit', (e) => {
-e.preventDefault();
-const checkin = new Date(document.getElementById('checkin').value);
-const checkout = new Date(document.getElementById('checkout').value);
-const guests = document.getElementById('guests').value;
-const roomPrice = parseInt(document.getElementById('roomType').value);
-const nights = (checkout - checkin)/(1000*60*60*24);
-if(nights <= 0){alert('Please select valid dates'); return;}
-const total = nights*roomPrice;
-priceDisplay.textContent = `Total Price: KES ${total.toLocaleString()}`;
-priceDisplay.style.display = 'block';
-});
-</script>
+<div class="room-card">
+<img src="https://image.qwenlm.ai/public_source/room3.jpg" class="room-image">
+<div class="room-details">
+<h3 class="room-title">Presidential Suite</h3>
+<span class="room-price">KES 18,000/night</span>
+<div class="room-amenities"><i class="fas fa-bed"></i> 2 King Beds<i class="fas fa-wifi"></i> Wi-Fi</div>
+<p>Luxury suite with panoramic forest views, private dining, and exclusive amenities.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-</body>
-</html>
+<!-- Dining & Conference -->
+<section id="dining" class="feature-section">
+<div class="container">
+<div class="section-title"><h2>Dining & Conference</h2><p>World-class dining and fully-equipped conference facilities.</p></div>
+<div class="feature-grid">
+<img src="https://image.qwenlm.ai/public_source/dining.jpg" class="feature-img">
+<div class="feature-content">
+<h3>Fine Dining Experience</h3>
+<p>Enjoy gourmet meals with a blend of local and international cuisine, served in a serene setting.</p>
+<h3>Conference & Events</h3>
+<p>State-of-the-art conference rooms for corporate events, meetings, and private functions.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="section-padding">
+<div class="container">
+<div class="section-title"><
